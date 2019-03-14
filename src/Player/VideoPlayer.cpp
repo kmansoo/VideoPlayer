@@ -31,14 +31,15 @@ int main(int argc, char* argv[]) {
     return 0;
   }
 
+  cv::namedWindow("Player");//for mousecallback
   cv::Mat source_img;
 
   for (;;) {
     video_cap >> source_img;
 
-    cv::imshow("image", source_img);           
+    cv::imshow("Player", source_img);           
 
-    //  cv::waitKey(0);
+    cv::waitKey(3);
   }
 
   return 0;
